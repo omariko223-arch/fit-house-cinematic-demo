@@ -1,24 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/fithouse/Nav";
+import { Hero } from "@/components/fithouse/Hero";
+import { Consistency } from "@/components/fithouse/Consistency";
+import { Disciplines } from "@/components/fithouse/Disciplines";
+import { Community } from "@/components/fithouse/Community";
+import { Membership } from "@/components/fithouse/Membership";
+import { Trainers } from "@/components/fithouse/Trainers";
+import { Schedule } from "@/components/fithouse/Schedule";
+import { AlwaysOpen } from "@/components/fithouse/AlwaysOpen";
+import { LocationFooter } from "@/components/fithouse/LocationFooter";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "FitHouse | 24/7 Gym in 6th of October, Egypt";
+const description =
+  "FitHouse in El Seyahia El Rabaa, 6th of October — strength, calisthenics, kickboxing, classes, personal training and kids fitness. Open 24/7.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="bg-background">
+      <Nav />
+      <Hero />
+      <Consistency />
+      <Disciplines />
+      <Community />
+      <Membership />
+      <Trainers />
+      <Schedule />
+      <AlwaysOpen />
+      <LocationFooter />
+    </main>
   );
 }

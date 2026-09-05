@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#training", label: "Training" },
+  { href: "#tour", label: "Tour" },
   { href: "#membership", label: "Membership" },
   { href: "#trainers", label: "The House" },
   { href: "#schedule", label: "Schedule" },

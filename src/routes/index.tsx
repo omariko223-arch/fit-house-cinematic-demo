@@ -3,6 +3,7 @@ import { Nav } from "@/components/fithouse/Nav";
 import { Hero } from "@/components/fithouse/Hero";
 import { Consistency } from "@/components/fithouse/Consistency";
 import { Disciplines } from "@/components/fithouse/Disciplines";
+import { VirtualTour } from "@/components/fithouse/VirtualTour";
 import { Community } from "@/components/fithouse/Community";
 import { Membership } from "@/components/fithouse/Membership";
 import { Trainers } from "@/components/fithouse/Trainers";
@@ -35,6 +36,7 @@ function Index() {
       <Hero />
       <Consistency />
       <Disciplines />
+      <VirtualTour />
       <Community />
       <Membership />
       <Trainers />

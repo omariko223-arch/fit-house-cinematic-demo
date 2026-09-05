@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0 grain">
         <img
           src={heroImg}
-          alt="Athlete training under green light at FitHouse gym"
+          alt="FitHouse gym floor at night lit by a green light strip"
           width={1920}
           height={1200}
           className="h-full w-full object-cover object-center"

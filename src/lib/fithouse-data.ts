@@ -8,6 +8,11 @@ import trainer1 from "@/assets/trainer-1.jpg";
 import trainer2 from "@/assets/trainer-2.jpg";
 import trainer3 from "@/assets/trainer-3.jpg";
 import trainer4 from "@/assets/trainer-4.jpg";
+import tourStrength from "@/assets/tour-strength.jpg";
+import tourCardio from "@/assets/tour-cardio.jpg";
+import tourRooftop from "@/assets/tour-rooftop.jpg";
+import tourOutdoor from "@/assets/tour-outdoor.jpg";
+import tourStudio from "@/assets/tour-studio.jpg";
 
 export const WHATSAPP_URL = "https://wa.me/00000000000?text=Hi%20FitHouse";
 export const INSTAGRAM_URL = "https://www.instagram.com/";
@@ -69,45 +74,98 @@ export const disciplines: Discipline[] = [
 
 export type Trainer = {
   id: string;
+  /** Slot label — replace with the real coach name when supplied. */
   name: string;
+  /** Neutral focus area. Keep factual until FitHouse confirms. */
   role: string;
+  /** ASSET SLOT: swap this import for the real trainer portrait. */
   image: string;
+  /** True while the image is a backdrop plate, not a real portrait. */
+  portraitPending: boolean;
   specialties: string[];
   bio: string;
 };
 
+const PENDING_BIO =
+  "Profile pending. Biography, coaching background and session style will be supplied by FitHouse.";
+
 export const trainers: Trainer[] = [
   {
     id: "t1",
-    name: "Coach Placeholder A",
-    role: "Strength & Conditioning",
+    name: "Coach A. Mosaad",
+    role: "Trainer slot 01",
     image: trainer1,
-    specialties: ["Barbell strength", "Athletic conditioning", "Return to training"],
-    bio: "Coaching profile placeholder. Full biography, coaching philosophy and session style to be supplied by FitHouse.",
+    portraitPending: true,
+    specialties: [],
+    bio: PENDING_BIO,
   },
   {
     id: "t2",
-    name: "Coach Placeholder B",
-    role: "Classes & Conditioning",
+    name: "Coach Kadnil",
+    role: "Trainer slot 02",
     image: trainer2,
-    specialties: ["Group formats", "Conditioning", "Mobility"],
-    bio: "Coaching profile placeholder. Full biography, coaching philosophy and session style to be supplied by FitHouse.",
+    portraitPending: true,
+    specialties: [],
+    bio: PENDING_BIO,
   },
   {
     id: "t3",
-    name: "Coach Placeholder C",
-    role: "Kickboxing & MMA",
+    name: "Trainer name pending",
+    role: "Trainer slot 03",
     image: trainer3,
-    specialties: ["Striking fundamentals", "Pad work", "Fight conditioning"],
-    bio: "Coaching profile placeholder. Full biography, coaching philosophy and session style to be supplied by FitHouse.",
+    portraitPending: true,
+    specialties: [],
+    bio: PENDING_BIO,
   },
   {
     id: "t4",
-    name: "Coach Placeholder D",
-    role: "Personal Training",
+    name: "Trainer name pending",
+    role: "Trainer slot 04",
     image: trainer4,
-    specialties: ["1:1 programming", "Technique coaching", "Kids fitness"],
-    bio: "Coaching profile placeholder. Full biography, coaching philosophy and session style to be supplied by FitHouse.",
+    portraitPending: true,
+    specialties: [],
+    bio: PENDING_BIO,
+  },
+];
+
+/** ASSET SLOTS: replace each `image` with a true equirectangular panorama when available. */
+export type TourScene = {
+  id: string;
+  name: string;
+  caption: string;
+  image: string;
+};
+
+export const tourScenes: TourScene[] = [
+  {
+    id: "strength",
+    name: "Strength Floor",
+    caption: "Racks, barbells and free weights.",
+    image: tourStrength,
+  },
+  {
+    id: "cardio",
+    name: "Cardio / Machines",
+    caption: "Cardio line and selectorised machines.",
+    image: tourCardio,
+  },
+  {
+    id: "rooftop",
+    name: "Rooftop Calisthenics",
+    caption: "Open-air bars, rings and parallel bars.",
+    image: tourRooftop,
+  },
+  {
+    id: "outdoor",
+    name: "Outdoor Fighting",
+    caption: "Heavy bag line under the canopy.",
+    image: tourOutdoor,
+  },
+  {
+    id: "studio",
+    name: "Classes & Dance Studio",
+    caption: "Mirrored floor for classes, dance and kids sessions.",
+    image: tourStudio,
   },
 ];
 

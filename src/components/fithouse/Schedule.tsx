@@ -32,7 +32,9 @@ export function Schedule() {
                 onClick={() => setDay(d)}
                 className={cn(
                   "relative flex-1 px-6 py-4 font-display text-lg uppercase tracking-[0.1em] transition-colors md:px-10",
-                  day === d ? "bg-lime text-primary-foreground" : "bg-ink text-muted-foreground hover:text-foreground",
+                  day === d
+                    ? "bg-lime text-primary-foreground"
+                    : "bg-ink text-muted-foreground hover:text-foreground",
                 )}
               >
                 {d}
@@ -72,7 +74,9 @@ export function Schedule() {
               style={{ animationDelay: `${i * 45}ms` }}
               className="group grid animate-[fade-in_0.5s_ease-out_both] grid-cols-[auto_minmax(0,1fr)] items-center gap-x-5 gap-y-2 border-b border-border py-5 transition-colors hover:bg-ink md:grid-cols-[7rem_minmax(0,1fr)_10rem_8rem_auto] md:py-6"
             >
-              <span className="font-display text-2xl leading-none text-lime md:text-3xl">{s.time}</span>
+              <span className="font-display text-2xl leading-none text-lime md:text-3xl">
+                {s.time}
+              </span>
               <span className="min-w-0">
                 <span className="block truncate font-display text-xl uppercase leading-none md:text-2xl">
                   {s.name}

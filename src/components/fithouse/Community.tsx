@@ -23,8 +23,8 @@ export function Community() {
               <span className="text-lime">trains together.</span>
             </Reveal>
             <Reveal className="mt-6 max-w-lg text-muted-foreground" delay={80}>
-              FitHouse is a room full of people chasing their own targets in the same place. Members,
-              coaches, first-timers — same floor, same energy.
+              FitHouse is a room full of people chasing their own targets in the same place.
+              Members, coaches, first-timers — same floor, same energy.
             </Reveal>
             <div className="mt-6">
               <DemoTag>Testimonials & transformations are placeholders</DemoTag>
@@ -34,7 +34,7 @@ export function Community() {
           <div className="relative aspect-[16/10] overflow-hidden grain">
             <img
               src={communityImg}
-              alt="Members training together at FitHouse"
+              alt="Community concept placeholder; real FitHouse photography pending"
               loading="lazy"
               width={1600}
               height={1000}
@@ -42,6 +42,9 @@ export function Community() {
               style={{ transform: `scale(1.1) translate3d(0, ${(0.5 - progress) * 40}px, 0)` }}
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-lime/20" />
+            <span className="absolute bottom-3 left-3 font-mono text-[9px] uppercase tracking-[0.16em] text-lime">
+              Concept image · real photo pending
+            </span>
           </div>
         </div>
 
@@ -74,7 +77,9 @@ export function Community() {
             >
               <div className="px-6">
                 <p className="kicker">Transformation slot</p>
-                <p className="mt-3 font-display text-2xl uppercase text-muted-foreground">{label}</p>
+                <p className="mt-3 font-display text-2xl uppercase text-muted-foreground">
+                  {label}
+                </p>
                 <p className="mt-2 text-xs text-muted-foreground/70">
                   Real member imagery and consent to be supplied by FitHouse.
                 </p>

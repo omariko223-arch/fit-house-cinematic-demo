@@ -14,6 +14,17 @@ import tourRooftop from "@/assets/tour-rooftop.jpg";
 import tourOutdoor from "@/assets/tour-outdoor.jpg";
 import tourStudio from "@/assets/tour-studio.jpg";
 
+/**
+ * REAL FITHOUSE ASSET MAP — referenced by the client but not currently present.
+ * Replace the matching imports above only after the verified files are supplied:
+ * 123259 strength/bodybuilding floor; 123226 rooftop/calisthenics;
+ * 123348 kickboxing/MMA; 123235 class/studio/functional area;
+ * 123247 nighttime rooftop; 123000 strength/PT editorial;
+ * 123024 C/Youssef; 123200 Coach A. Mosaad; 123211 Coach Kadnil;
+ * 123039 and 123102 additional unnamed trainer imagery.
+ */
+export const VISUAL_ASSET_STATUS = "Concept placeholder — real FitHouse photo pending";
+
 export const WHATSAPP_URL = "https://wa.me/00000000000?text=Hi%20FitHouse";
 export const INSTAGRAM_URL = "https://www.instagram.com/";
 export const MAPS_URL =
@@ -92,7 +103,7 @@ const PENDING_BIO =
 export const trainers: Trainer[] = [
   {
     id: "t1",
-    name: "Coach A. Mosaad",
+    name: "Verified trainer graphic pending",
     role: "Trainer slot 01",
     image: trainer1,
     portraitPending: true,
@@ -101,7 +112,7 @@ export const trainers: Trainer[] = [
   },
   {
     id: "t2",
-    name: "Coach Kadnil",
+    name: "Verified trainer graphic pending",
     role: "Trainer slot 02",
     image: trainer2,
     portraitPending: true,
@@ -110,7 +121,7 @@ export const trainers: Trainer[] = [
   },
   {
     id: "t3",
-    name: "Trainer name pending",
+    name: "Verified trainer graphic pending",
     role: "Trainer slot 03",
     image: trainer3,
     portraitPending: true,
@@ -119,7 +130,7 @@ export const trainers: Trainer[] = [
   },
   {
     id: "t4",
-    name: "Trainer name pending",
+    name: "Verified trainer graphic pending",
     role: "Trainer slot 04",
     image: trainer4,
     portraitPending: true,
@@ -217,16 +228,26 @@ export const classTypes = ["All", "Strength", "Kickboxing", "Conditioning", "Kid
 
 const build = (): ClassSlot[] => {
   const template: Array<Omit<ClassSlot, "day">> = [
-    { time: "07:00", name: "Morning Strength", type: "Strength", coach: "Coach A", duration: "60 min" },
-    { time: "10:00", name: "Conditioning Circuit", type: "Conditioning", coach: "Coach B", duration: "45 min" },
+    {
+      time: "07:00",
+      name: "Morning Strength",
+      type: "Strength",
+      coach: "Coach A",
+      duration: "60 min",
+    },
+    {
+      time: "10:00",
+      name: "Conditioning Circuit",
+      type: "Conditioning",
+      coach: "Coach B",
+      duration: "45 min",
+    },
     { time: "17:00", name: "Kids Movement", type: "Kids", coach: "Coach D", duration: "45 min" },
     { time: "19:00", name: "Kickboxing", type: "Kickboxing", coach: "Coach C", duration: "60 min" },
     { time: "21:00", name: "Night Lift", type: "Strength", coach: "Coach A", duration: "60 min" },
   ];
   return days.flatMap((day, i) =>
-    template
-      .filter((_, idx) => !(i % 3 === 2 && idx === 2))
-      .map((t) => ({ ...t, day })),
+    template.filter((_, idx) => !(i % 3 === 2 && idx === 2)).map((t) => ({ ...t, day })),
   );
 };
 

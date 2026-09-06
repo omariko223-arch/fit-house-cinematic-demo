@@ -75,7 +75,9 @@ export function Trainers() {
                   <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-lime transition-transform duration-500 group-hover:scale-x-100" />
                 </span>
                 <span className="block p-5">
-                  <span className="block font-display text-2xl uppercase leading-none">{t.name}</span>
+                  <span className="block font-display text-2xl uppercase leading-none">
+                    {t.name}
+                  </span>
                   <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-lime">
                     {t.role}
                   </span>

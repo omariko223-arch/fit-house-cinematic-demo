@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { Reveal, SectionLabel } from "./primitives";
 
 export function Disciplines() {
-  const [active, setActive] = useState(disciplines[0].id);
-  const current = disciplines.find((d) => d.id === active) ?? disciplines[0];
+  const [active, setActive] = useState(disciplines[0]!.id);
+  const current = disciplines.find((d) => d.id === active) ?? disciplines[0]!;
 
   return (
     <section id="training" className="relative bg-background py-24 md:py-32">

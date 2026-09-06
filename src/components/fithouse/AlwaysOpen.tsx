@@ -37,7 +37,9 @@ export function AlwaysOpen() {
         <div className="mt-12 flex flex-wrap justify-center gap-10">
           {["365 days", "24 hours", "One house"].map((s, i) => (
             <Reveal key={s} delay={i * 120} className="text-center">
-              <p className="font-display text-4xl uppercase text-lime md:text-6xl">{s.split(" ")[0]}</p>
+              <p className="font-display text-4xl uppercase text-lime md:text-6xl">
+                {s.split(" ")[0]}
+              </p>
               <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
                 {s.split(" ").slice(1).join(" ")}
               </p>

@@ -103,7 +103,12 @@ export function LocationFooter() {
                 <li>El Seyahia El Rabaa, 6th of October</li>
                 <li>Phone to be supplied</li>
                 <li>
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-lime">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-lime"
+                  >
                     Instagram
                   </a>
                 </li>

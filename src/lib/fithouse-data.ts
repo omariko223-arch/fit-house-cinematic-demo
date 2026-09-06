@@ -228,16 +228,26 @@ export const classTypes = ["All", "Strength", "Kickboxing", "Conditioning", "Kid
 
 const build = (): ClassSlot[] => {
   const template: Array<Omit<ClassSlot, "day">> = [
-    { time: "07:00", name: "Morning Strength", type: "Strength", coach: "Coach A", duration: "60 min" },
-    { time: "10:00", name: "Conditioning Circuit", type: "Conditioning", coach: "Coach B", duration: "45 min" },
+    {
+      time: "07:00",
+      name: "Morning Strength",
+      type: "Strength",
+      coach: "Coach A",
+      duration: "60 min",
+    },
+    {
+      time: "10:00",
+      name: "Conditioning Circuit",
+      type: "Conditioning",
+      coach: "Coach B",
+      duration: "45 min",
+    },
     { time: "17:00", name: "Kids Movement", type: "Kids", coach: "Coach D", duration: "45 min" },
     { time: "19:00", name: "Kickboxing", type: "Kickboxing", coach: "Coach C", duration: "60 min" },
     { time: "21:00", name: "Night Lift", type: "Strength", coach: "Coach A", duration: "60 min" },
   ];
   return days.flatMap((day, i) =>
-    template
-      .filter((_, idx) => !(i % 3 === 2 && idx === 2))
-      .map((t) => ({ ...t, day })),
+    template.filter((_, idx) => !(i % 3 === 2 && idx === 2)).map((t) => ({ ...t, day })),
   );
 };
 

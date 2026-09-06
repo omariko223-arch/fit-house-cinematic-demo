@@ -23,8 +23,8 @@ export function Community() {
               <span className="text-lime">trains together.</span>
             </Reveal>
             <Reveal className="mt-6 max-w-lg text-muted-foreground" delay={80}>
-              FitHouse is a room full of people chasing their own targets in the same place. Members,
-              coaches, first-timers — same floor, same energy.
+              FitHouse is a room full of people chasing their own targets in the same place.
+              Members, coaches, first-timers — same floor, same energy.
             </Reveal>
             <div className="mt-6">
               <DemoTag>Testimonials & transformations are placeholders</DemoTag>
@@ -77,7 +77,9 @@ export function Community() {
             >
               <div className="px-6">
                 <p className="kicker">Transformation slot</p>
-                <p className="mt-3 font-display text-2xl uppercase text-muted-foreground">{label}</p>
+                <p className="mt-3 font-display text-2xl uppercase text-muted-foreground">
+                  {label}
+                </p>
                 <p className="mt-2 text-xs text-muted-foreground/70">
                   Real member imagery and consent to be supplied by FitHouse.
                 </p>

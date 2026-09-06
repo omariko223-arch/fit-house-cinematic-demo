@@ -43,8 +43,7 @@ export function VirtualTour() {
     };
   }, [dragging]);
 
-  const step = (dir: -1 | 1) =>
-    setIndex((i) => (i + dir + tourScenes.length) % tourScenes.length);
+  const step = (dir: -1 | 1) => setIndex((i) => (i + dir + tourScenes.length) % tourScenes.length);
 
   if (!scene) return null;
 

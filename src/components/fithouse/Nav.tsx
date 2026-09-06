@@ -66,10 +66,16 @@ export function Nav() {
           className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 border border-border lg:hidden"
         >
           <span
-            className={cn("h-px w-4 bg-foreground transition-transform", open && "translate-y-[3px] rotate-45")}
+            className={cn(
+              "h-px w-4 bg-foreground transition-transform",
+              open && "translate-y-[3px] rotate-45",
+            )}
           />
           <span
-            className={cn("h-px w-4 bg-foreground transition-transform", open && "-translate-y-[3px] -rotate-45")}
+            className={cn(
+              "h-px w-4 bg-foreground transition-transform",
+              open && "-translate-y-[3px] -rotate-45",
+            )}
           />
         </button>
       </div>

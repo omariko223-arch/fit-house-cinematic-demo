@@ -28,10 +28,14 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-[100rem] flex-col justify-end px-5 pb-14 pt-32 md:px-10 md:pb-20">
         <div className="max-w-5xl">
-          <p className="kicker mb-6 animate-[fade-in_0.8s_ease-out]">Fit House · El Seyahia El Rabaa</p>
+          <p className="kicker mb-6 animate-[fade-in_0.8s_ease-out]">
+            Fit House · El Seyahia El Rabaa
+          </p>
           <h1 className="display text-[clamp(3.2rem,13vw,11rem)]">
             <span className="block overflow-hidden">
-              <span className="block animate-[fade-in_0.9s_cubic-bezier(0.16,1,0.3,1)]">Your fitness</span>
+              <span className="block animate-[fade-in_0.9s_cubic-bezier(0.16,1,0.3,1)]">
+                Your fitness
+              </span>
             </span>
             <span className="block overflow-hidden">
               <span

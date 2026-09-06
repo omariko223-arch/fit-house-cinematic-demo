@@ -17,7 +17,7 @@ export function VirtualTour() {
   const frameRef = useRef<HTMLDivElement | null>(null);
   const startRef = useRef<{ x: number; pan: number } | null>(null);
   const reduced = usePrefersReducedMotion();
-  const scene = tourScenes[index] ?? tourScenes[0]!;
+  const scene = tourScenes[index] ?? tourScenes[0];
 
   useEffect(() => {
     setPan(0.5);
@@ -45,6 +45,8 @@ export function VirtualTour() {
 
   const step = (dir: -1 | 1) =>
     setIndex((i) => (i + dir + tourScenes.length) % tourScenes.length);
+
+  if (!scene) return null;
 
   return (
     <section id="tour" className="relative overflow-hidden bg-ink py-24 md:py-32">
@@ -79,7 +81,7 @@ export function VirtualTour() {
               <img
                 key={s.id}
                 src={s.image}
-                alt={`${s.name} — FitHouse concept walkthrough scene`}
+                alt={`${s.name} concept placeholder; not verified FitHouse photography`}
                 loading="lazy"
                 width={1920}
                 height={768}
@@ -170,7 +172,7 @@ export function VirtualTour() {
               </button>
             ))}
             <p className="mt-5 font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
-              Demo scenes. Real FitHouse panoramas drop straight into these slots.
+              Demo scenes only. Real FitHouse photography is not yet available in this project.
             </p>
           </div>
         </div>

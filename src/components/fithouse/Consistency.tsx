@@ -49,7 +49,7 @@ export function Consistency() {
           <div className="relative aspect-[16/10] overflow-hidden grain">
             <img
               src={nightImg}
-              alt="FitHouse training floor at night"
+              alt="Gym-floor concept placeholder; real FitHouse photography pending"
               loading="lazy"
               width={1920}
               height={1080}
@@ -58,7 +58,7 @@ export function Consistency() {
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-lime/25" />
             <span className="absolute bottom-3 left-3 font-mono text-[10px] uppercase tracking-[0.22em] text-lime">
-              Footage placeholder
+              Concept image · real photo pending
             </span>
           </div>
         </div>

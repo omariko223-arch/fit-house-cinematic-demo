@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0 grain">
         <img
           src={heroImg}
-          alt="FitHouse gym floor at night lit by a green light strip"
+          alt="Cinematic gym concept placeholder; real FitHouse hero photography pending"
           width={1920}
           height={1200}
           className="h-full w-full object-cover object-center"
@@ -19,10 +19,10 @@ export function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/70" />
         <div className="absolute inset-0 scanlines opacity-40" />
-        {/* Footage placeholder marker */}
+        {/* Generated concept marker — replace only with verified FitHouse photography. */}
         <div className="absolute right-5 top-24 hidden items-center gap-2 border border-lime/40 bg-background/60 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-lime backdrop-blur md:flex">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-lime" />
-          Video placeholder · demo
+          Concept image · real photo pending
         </div>
       </div>
 

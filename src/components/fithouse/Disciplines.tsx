@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { disciplines } from "@/lib/fithouse-data";
+import { disciplines, VISUAL_ASSET_STATUS } from "@/lib/fithouse-data";
 import { cn } from "@/lib/utils";
 import { Reveal, SectionLabel } from "./primitives";
 
 export function Disciplines() {
-  const [active, setActive] = useState(disciplines[0]!.id);
-  const current = disciplines.find((d) => d.id === active) ?? disciplines[0]!;
+  const [active, setActive] = useState(disciplines[0]?.id ?? "");
+  const current = disciplines.find((d) => d.id === active) ?? disciplines[0];
+
+  if (!current) return null;
 
   return (
     <section id="training" className="relative bg-background py-24 md:py-32">
@@ -70,12 +72,15 @@ export function Disciplines() {
                     <span className="relative block aspect-[16/10] overflow-hidden grain">
                       <img
                         src={d.image}
-                        alt={d.title}
+                        alt={`${d.title} concept placeholder; real FitHouse photography pending`}
                         loading="lazy"
                         width={1024}
                         height={1280}
                         className="h-full w-full animate-[fade-in_0.5s_ease-out] object-cover"
                       />
+                      <span className="absolute bottom-3 left-3 font-mono text-[9px] uppercase tracking-[0.16em] text-lime">
+                        {VISUAL_ASSET_STATUS}
+                      </span>
                     </span>
                   )}
                 </span>
@@ -90,7 +95,7 @@ export function Disciplines() {
                 <img
                   key={d.id}
                   src={d.image}
-                  alt={d.title}
+                  alt={`${d.title} concept placeholder; real FitHouse photography pending`}
                   loading="lazy"
                   width={1024}
                   height={1280}
@@ -101,6 +106,9 @@ export function Disciplines() {
                 />
               ))}
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+              <span className="absolute right-4 top-4 border border-lime/35 bg-background/60 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.16em] text-lime backdrop-blur">
+                {VISUAL_ASSET_STATUS}
+              </span>
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="font-display text-3xl uppercase text-lime">{current.title}</p>
                 <ul className="mt-3 space-y-1.5">

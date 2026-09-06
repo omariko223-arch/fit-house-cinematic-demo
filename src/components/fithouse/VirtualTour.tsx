@@ -17,7 +17,7 @@ export function VirtualTour() {
   const frameRef = useRef<HTMLDivElement | null>(null);
   const startRef = useRef<{ x: number; pan: number } | null>(null);
   const reduced = usePrefersReducedMotion();
-  const scene = tourScenes[index];
+  const scene = tourScenes[index] ?? tourScenes[0]!;
 
   useEffect(() => {
     setPan(0.5);
